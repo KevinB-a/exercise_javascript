@@ -1,30 +1,61 @@
 //exercise1
-var number = 5;
-var number1 = 13;
-var number2 = 23;
-var number3 = 32;
+var number = 57;
+var number1 = 23;
+var number2 = 98;
+var number3 = 67;
 
-if (number > number1 ); and (number > number2); and(number > number3);
-{
-    console.log(number);
-}
-if (number1 > number ); and (number1 > number2); and(number1 > number3);
-{
-    console.log(number1);
-}
-if (number2 > number ); and (number2 >number1); and(number2 > number3);
-{
-    console.log(number2);
-}
-if (number3 > number ); and (number3 > number2); and(number3 > number1);
-{
-    console.log(number3);
-}
+function biggestNumber(number, number1, number2, number3) {
+    if (number > number1 && number > number2 && number > number3) 
+    {
+      console.log(a);
+    } 
+    else if (number1 > number && number1 > number2 && number1 > number3) 
+    {
+      console.log(b)
+    } 
+    else if (number2 > number1 && number2 > number1 && number2 > number3) 
+    {
+      console.log(c);
+    } 
+    else 
+    {
+      console.log(d);
+    }
+  }
+  biggestNumber(number, number1, number2, number3);
 
 //exercise2
-
+var userAge = Number(prompt("Quel âge avez-vous ?"));
+if (userAge !== 0) {
+  if (userAge <= 0) {
+    alert("Rentrez votre vrai âge !"); 
+  }
+  if (userAge >= 21) {
+    alert("vous pouvez entrer !");
+  }
+  if (userAge % 2 === 0) {
+    alert("Votre âge est paire");
+  }
+  if (Number.isInteger(Math.sqrt(userAge))) {
+    alert("Votre âge est un carré");
+  }
+} else {
+  alert("Vous n'avez rien rentré !")
+}
 //exercise3
+var hiddeNumber = 32;
+var userNumber = null;
 
+while (hiddeNumber !== userNumber) {
+  userNumber = Number(prompt("Quel est le nombre caché ?"));
+  if (userNumber > hiddeNumber) {
+    alert("Trop haut !");
+  } else if (userNumber < hiddeNumber) {
+    alert("Trop bas");
+  } else {
+    alert("Trouvé !");
+  }
+}
 //exercise4
 var n = 0;
 while(n !=100);
@@ -50,7 +81,17 @@ function filling(lenght,width,depth,debit)
 filling(5,4,2,3)
 
 // exercise7
-
+var ray = Number(prompt("veuillez entrez le rayon du cercle"));
+function areaCircle()
+{
+    var area = (Math.sqrt(rayon) * Math.PI).toFixed(2);
+    console.log("Votre cercle a une aire de " + area + " cm carrés");
+}
+function perimeterCircle()
+{
+    var perimeter = (2 * Math.PI * rayon).toFixed(2);
+    console.log("Votre cercle a un perimètre de " + perimeter + " cm");
+}
 //exercise8
 
 var n = 0;
@@ -62,8 +103,21 @@ while (n != 6)
 }
 
 //exercise9
-var n = 0;
-while(n != 100)
+for (var i = 1; i <= 100; i++) 
 {
-    if (n/5).
+    if (i % 15 === 0) 
+    {
+      console.log("FIZZBUZZ");
+    } 
+    else if (i % 5 === 0) 
+    {
+      console.log("BUZZ");
+    } 
+    else if (i % 3 === 0) {
+      console.log("FIZZ");
+    } 
+    else 
+    {
+      console.log(i);
+    }
 }

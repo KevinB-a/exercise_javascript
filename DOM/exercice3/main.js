@@ -1,13 +1,28 @@
-var input = 
-var addItem = 
-var shoppingList = 
+var input = document.getElementById("input");
+var addItem = document.getElementById("addItem");
+var shoppingList = document.getElementById("shoppingList");
 
-function addListItem
+function addListItem(itemToAdd) {
+  var li = document.createElement("li");
+  li.innerHTML = itemToAdd;
+  shoppingList.appendChild(li);
+  input.value = "";
+}
 
-addItem.onclick = 
+addItem.onclick = function() {
+  var itemToAdd = input.value;
 
-  if
+  if(itemToAdd.length > 0) {
+    addListItem(itemToAdd);
+  }
+};
 
-input.onkeyup = 
+input.onkeyup = function(event) {
+  if(event.keyCode === 13) {
+    var itemToAdd = input.value;
 
-    if
+    if(itemToAdd.length > 0) {
+      addListItem(itemToAdd);
+    }
+  }
+};
