@@ -1,8 +1,10 @@
 //exercise1
 var chest = "\n";
 
-for(var i=1; i <= 8; i++) {
- for(var j=1; j <= 16; j++) {
+for(var i=1; i <= 8; i++) 
+{
+ for(var j=1; j <= 16; j++) 
+ {
    if(j%2===0) {
      chest += " ";
    }
@@ -18,12 +20,15 @@ console.log(chest);
 //exercise2
 var matrix = "\n";
 
-for(var i=1; i <= 4; i++) {
- for(var j=1; j <= 4; j++) {
+for(var i=1; i <= 4; i++) 
+{
+ for(var j=1; j <= 4; j++) 
+ {
    if(i === j) {
      matrix += "1 \n";
    }
-   else {
+   else 
+   {
      matrix += "0 \n";
    }
  }
@@ -36,12 +41,14 @@ console.log(matrix);
 
 //Exercice 3 : Nombre paire ?
 
-function isOdd(amont) {
+function isOdd(amont) 
+{
  amont = Math.round(Number(amont));
  if(amont%2 === 0) {
    console.log(true);
  }
- else {
+ else 
+ {
    console.log(false);
  }
 }
@@ -51,17 +58,21 @@ isOdd(4);
 
 //Exercice 4 : Vous avez dit factorielle ?
 
-function factorielle(value) {
- if(Number.isInteger(value)) {
+function factorielle(value) 
+{
+ if(Number.isInteger(value)) 
+ {
     var result = 1;
-    for(var i=1; i < value; i++) {
+    for(var i=1; i < value; i++) 
+    {
     result += result * i;
    }
    console.log(result);
  }
- else {
+ else
+{
    console.log("erreur");
- }
+}
 }
 
 factorielle(4);
@@ -70,14 +81,17 @@ factorielle(4);
 //Exercice 5 : Les tirets ça compte !
 
 
-function toUnderscore(string) {
- if( typeof string === "string") {
+function toUnderscore(string) 
+{
+ if( typeof string === "string") 
+ {
    string = string.replace(/-/g, "_");
    console.log(string);
  }
- else {
+ else
+{
    console.log("Attention il faut passer une string en argument");
- }
+}
 }
 
 toUnderscore("attention-aux-tirets")
@@ -119,10 +133,13 @@ var people =
  ]
 ];
 
-function showPeople(arrayPeople) {
- for(var i = 0; i < arrayPeople.length; i++) {
+function showPeople(arrayPeople) 
+{
+ for(var i = 0; i < arrayPeople.length; i++) 
+ {
    var singlePeople = arrayPeople[i];
-   for(var j = 0; j < singlePeople.length; j++ ) {
+   for(var j = 0; j < singlePeople.length; j++ ) 
+   {
      console.log(singlePeople[j]);
    }
  }
@@ -170,9 +187,38 @@ for(var i=0; i < tasks.length; i++)
 var continue_game = new Boolean("true");
 console.log("Welcome on shifumi game")
 
-while (continue_game == True)
+while (continue_game == "true")
 {
-   var score_user=0;
-   var score_computer=0;
+    var scoreUser=0;
+    var scoreComputer=0;
+    var username = prompt("quel est votre nom ou pseudo ? ");
+    while (scoreUser && scoreComputer !=3)
+    {
+        var answer = prompt("veuillez entrez votre choix (pierre, papier, ciseaux)");
+        var listactions = ["pierre","papier","ciseaux"];
+        var randomaction = listactions[Math.floor(Math.random()*listactions.length)];
+        console.log(randomaction);
+        if (playerChoice != computerChoice)
+        {
+            if (answer == "pierre" && randomaction == "ciseaux" 
+            || answer == "feuille" && randomaction == "pierre"
+            || answer == "ciseaux" && randomaction == "feuille")
+                scoreUser += 1;
+            else
+            {
+                scoreComputer += 1;
+            }
+        console.log("le score de l'ordi est",scoreComputer,"votre est ",scoreUser);
+        var replay = prompt("voulez vous rejouer ? (tapez non pour quitter oui pour rejouer");
+        if (replay == "non")
+        {
+            continue_game == false;
+        }
+        else
+        {
+            continue_game == true;
+        }
+    } 
 
+}
 }
