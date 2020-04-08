@@ -1,75 +1,33 @@
-## 1\.Exercice 1 : Le nombre le plus grand
-
-Déclarer 4 variables ayant chacune pour valeur un chiffre différent.
-Ecrire un programme renvoyant dans la console la valeur la plus élevée.
+# Exercice de programmation orientée objet en JavaScript : La piscine
 
 
-## 2\.Exercice 2 : Conditon d'âge
 
-Ecrire un programme JavaScript qui demande son âge à l'utilisateur. Si l'utilisateur a rentré quelque chose et que :
+Au travers de cet exercice :
+- déclarer des attributs
+- déclarer des méthodes
+- utiliser le constructeur d'objets en JavaScript
+- instancier un objet
+- réaliser des calculs au travers d'un objet
+- manipuler l'arbre HTML via un objet
 
-- l'age est négatif afficher un message qui demande d'entrer un âge réel
-- l'age est supérieur ou égal à 21 ans afficher un message autorisant l'accès
-- l'age est paire afficher un message indiquant à l'utilisateur que son âge est pair
-- l'age est un carré afficher un message indiquant à l'utilisateur que son âge est un nombre carré
+## Consignes
 
-Sinon affichez un message d'erreur s'il n'a rien rentré
+Lors de votre apprentissage du JavaScript vous aviez réalisé un exercice d'algorithmie consistant à créer une fonction qui calculait le temps de remplissage d'une piscine.
 
-Attention à l'ordre dans lequel vous effectuez vos tests !
+Ici vous allez refaire un exercice similaire mais en programmation orientée objet !
 
+Pour ce faire, vous allez créer le constructeur d'un objet piscine. Cet objet piscine aura besoin de 4 informations stockées dans des attributs : la longueur, la largeur, la hauteur de la piscine et le débit de remplissage en m3 par minute.
 
-## 3\.Exercice 3 : Le nombre caché
+A cette étape vous pouvez déja instancier un objet piscine basique en lui passant 4 valeurs en argument. Le problème c'est que cet objet ne fait rien pour le moment. Vous allez donc lui ajouter une méthode remplissage.
 
-Stockez un nombre entier de votre choix dans une variable. Ecrivez ensuite un programme qui demande à l'utilisateur de deviner ce nombre.
+La fonction remplissage calcul le temps de remplissage de la piscine grâce aux attributs de l'objet et retourne ce résultat. A ce stade votre objet est fonctionnel et fait ce qu'on lui demande, il prend des valeurs et calcul un débit.
 
-Si l'utilisateur trouve le bon nombre vous lui annoncez qu'il a gagné. Sinon vous lui dites si son nombre est plus grand ou plus petit que le nombre caché. Tant que l'utilisateur n'a pas trouvé le bon nombre vous lui reposez la question.
+Allons plus loin, créez une méthode pour afficher sur une page HTML toutes ces informations. Cette méthode affiche donc à l'écran la longueur, la largeur, la profondeur et le débit. Elle affiche également le temps de remplissage. En ce qui concerne l'affichage, vous pouvez faire quelque chose de très simple en mettant les informations simplement dans des paragraphes si vous le souhaitez.
 
+Astuce : la méthode pour afficher les informations devra faire appel à la méthode remplissage.
 
-## 4\.Exercice 4 : Des nombres en boucle
+# Pour aller plus loin
 
-Ecrire un programme qui affiche à l'écran les nombre de 1 à 100 en revenant à chaque fois à la ligne.
+Si vous souhaitez rendre votre application un peu plus fonctionnelle, pourquoi ne pas proposer à l'utilisateur un formulaire dans lequel il pourra indiquer les informations de sa piscine et lui afficher son temps de remplissage quand il clique sur le bouton de soumission ? Ainsi les valeurs de votre piscine pourront changer dès que l'utilisateur le souhaitera.
 
-Exemple :
-
-1
-2
-3
-...
-
-
-## 5\.Exercice 5 : Des nombres en boucle bis
-
-Créez une boucle allant de 1 à 100, et n'affichez dans la console que les chiffres pairs.
-
-
-## 6\.Exercice 6 : Remplir la piscine
-
-Ecrire une fonction en Javascript qui indique le temps de remplissage d'une piscine en fonction de sa longueur, sa largeur, sa profondeur, et du débit d'eau. Les longueurs sont en mètre (m), le débit en mètre cube par minute (m3/min) et le résultat attendu, le temps, en minute (min).
-
-
-## 7\.Exercice 7 : Calcul de cercle
-
-Ecrire 2 fonctions, l'une retournant l'aire d'un cercle, l'autre son périmètre.
-Le Rayon devra être entrer manuellement à l'aide d'un "prompt()".
-
-Les résultats des deux fonctions seront affichés dans la console.
-
-Pour aller plus loin, arrondissez les résultats à la deuxième décimale.
-
-
-## 8\.Exercice 8 : Une pyramide
-
-Ecrire un programme affichant dans la console le résultat suivant:
-
-```
-*
-**
-***
-****
-*****
-```
-
-
-## 9\.Exercice 9 : FIZZ BUZZ
-
-Ecrire un programme qui affiche les nombres de 1 à 100. Quand le nombre est un multiple de 3 afficher "FIZZ", quand le nombre est un multiple de 5 afficher "BUZZ" et quand le nombre est un multiple de 3 et 5 afficher "FIZZBUZZ"
+Pour ce faire vous aurez sûrement besoin d'un nouvel objet, littéral cette fois, qui se chargera de récupérer les informations du formulaire et de générer la nouvelle piscine.
