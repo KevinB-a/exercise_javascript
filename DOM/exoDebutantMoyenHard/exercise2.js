@@ -187,7 +187,7 @@ for(var i=0; i < tasks.length; i++)
 var continueGame = new Boolean("true");
 console.log("Welcome on shifumi game")
 
-while (continueGame == "true")
+while (continueGame)
 {
     var scoreUser=0;
     var scoreComputer=0;
