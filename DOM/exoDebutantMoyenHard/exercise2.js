@@ -5,7 +5,7 @@ for(var i=1; i <= 8; i++)
 {
  for(var j=1; j <= 16; j++) 
  {
-   if(j%2===0) {
+   if(j%2==0) {
      chest += " ";
    }
    else {
@@ -100,11 +100,11 @@ toUnderscore("attention-aux-tirets")
 
 var shoppingList = 
 [
- "pâtes",
- "riz",
- "viande",
- "coca",
- "haricots"
+ "frites",
+ "yahourt",
+ "steack",
+ "eau",
+ "legumes"
 ];
 
 console.log("Il faut acheter : " + shoppingList[0]);
@@ -117,19 +117,19 @@ console.log("Il faut acheter : " + shoppingList[2]);
 var people = 
 [
  [
-   "Paul",
+   "Thomas",
    "Homme",
-   44
+   33
  ],
  [
-   "Stephanie",
+   "Manon",
    "Femme",
-   32
+   24
  ],
  [
-   "Marc",
+   "Nicos",
    "Homme",
-   24
+   34
  ]
 ];
 
@@ -184,39 +184,39 @@ for(var i=0; i < tasks.length; i++)
  console.log(tasks[i]);
 }
 // exercise 10 shifumi
-var continue_game = new Boolean("true");
+var continueGame = new Boolean("true");
 console.log("Welcome on shifumi game")
 
-while (continue_game == "true")
+while (continueGame == "true")
 {
     var scoreUser=0;
     var scoreComputer=0;
-    var username = prompt("quel est votre nom ou pseudo ? ");
+    var userName = prompt("quel est votre nom ou pseudo ? ");
     while (scoreUser && scoreComputer !=3)
     {
-        var answer = prompt("veuillez entrez votre choix (pierre, papier, ciseaux)");
-        var listactions = ["pierre","papier","ciseaux"];
-        var randomaction = listactions[Math.floor(Math.random()*listactions.length)];
+        var answer = prompt("veuillez entrez votre choix (pierre, papier, ciseaux)").toLowerCase();
+        var listActions = ["pierre","papier","ciseaux"];
+        var randomAction = listactions[Math.floor(Math.random()*listactions.length)];
         console.log(randomaction);
-        if (playerChoice != computerChoice)
+        if (answer !=randomAction )
         {
-            if (answer == "pierre" && randomaction == "ciseaux" 
-            || answer == "feuille" && randomaction == "pierre"
-            || answer == "ciseaux" && randomaction == "feuille")
+            if (answer == "pierre" && randomAction == "ciseaux" 
+            || answer == "feuille" && randomAction == "pierre"
+            || answer == "ciseaux" && randomAction == "feuille")
                 scoreUser += 1;
             else
             {
                 scoreComputer += 1;
             }
-        console.log("le score de l'ordi est",scoreComputer,"votre est ",scoreUser);
+        console.log("le score de l'ordi est",scoreComputer,"votre score est ",scoreUser);
         var replay = prompt("voulez vous rejouer ? (tapez non pour quitter oui pour rejouer");
         if (replay == "non")
         {
-            continue_game == false;
+            continueGame == false;
         }
         else
         {
-            continue_game == true;
+            continueGame == true;
         }
     } 
 
